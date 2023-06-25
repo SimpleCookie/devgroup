@@ -1,0 +1,20 @@
+$primary: #6e3667;
+$secondary: #f4f1f3;
+$text-color: #FFF;
+
+
+.background {
+  &--primary {
+    background-color: $primary;
+  }
+
+  &--secondary {
+    background-color: $secondary;
+  }
+}
+
+.text {
+  &--color {
+    color: $text-color;
+  }
+}
