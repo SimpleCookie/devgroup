@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { theme } from "../globals/theme"
 import coffeeImg from "../imgs/coffee.jpeg"
 import excavator from "../imgs/excavator-icon.png"
+import { logoOrange } from "../imgs"
 
 
 const Wrapper = styled.header`
@@ -18,7 +19,7 @@ const Introduction = styled.div`
 
 const Tint = styled.div`
   width: 100%;
-  background-color: rgba(97,97,97,0.4);
+  background-color: rgba(187,187,187,0.4);
   height: 100%;
 `
 
@@ -33,8 +34,8 @@ export const Header = () => {
     <Wrapper className="object-fit">
       <Tint className="flex">
         <Introduction>
-          <h1 className="uppercase text-6xl text-center">Devgroup.se</h1>
-          <h2 className="uppercase text-6xl text-center">The IT-consultants </h2>
+          <img src={logoOrange} alt="Dvgroup logotype" width={500} />
+          <h1 className=" text-6xl text-center">The IT-consultants</h1>
         </Introduction>
       </Tint>
     </Wrapper>
