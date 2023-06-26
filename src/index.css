@@ -18,9 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-section:nth-child(even) {
-  background: rgba(0, 120, 0, 0.2);
-}
+
 section:nth-child(odd) {
-  background: rgba(120, 0, 0, 0.2);
+  border-bottom: 3px solid #999;
 }
