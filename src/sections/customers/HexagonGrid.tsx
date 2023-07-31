@@ -4,6 +4,7 @@ export interface HexagonProps {
   image: string
   alt: string
   objectFit: ObjectFit
+  padding?: boolean
 }
 
 interface Props {
@@ -17,6 +18,7 @@ export const HexagonGrid = ({ hexagons, size }: Props) => {
       {hexagons.map((hexagon, index) => {
         return <Hexagon
           key={hexagon.image}
+          padding={hexagon.padding}
           imageUrl={hexagon.image}
           size={size}
           objectFit={hexagon.objectFit}
