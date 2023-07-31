@@ -3,20 +3,20 @@ import { imgElinorr, imgGodesity, imgHairtastic, imgLeeroy, imgSmidesrum } from 
 import { Hexagon } from "../../layout/Hexagon"
 import { Section } from "../../layout/Section"
 import "./customers.scss"
-import { HexagonGrid } from "./HexagonGrid"
+import { HexagonGrid, HexagonProps } from "./HexagonGrid"
 
 
 
 const Customers = () => {
-  const customers = [
-    { image: imgElinorr, alt: "Elinorr" },
-    { image: imgGodesity, alt: "Godesity" },
-    { image: imgHairtastic, alt: "Hairtastic" },
-    { image: imgLeeroy, alt: "Leeroy" },
-    { image: imgSmidesrum, alt: "Smidesrum" },
+  const customers: HexagonProps[] = [
+    { image: imgElinorr, alt: "Elinorr", objectFit: "cover" },
+    { image: imgGodesity, alt: "Godesity", objectFit: "cover" },
+    { image: imgHairtastic, alt: "Hairtastic", objectFit: "cover" },
+    { image: imgLeeroy, alt: "Leeroy", objectFit: "contain" },
+    { image: imgSmidesrum, alt: "Smidesrum", objectFit: "contain" },
   ]
   return <Section title="Customers">
-    <HexagonGrid hexagons={customers} />
+    <HexagonGrid hexagons={customers} size={200} />
   </Section>
 }
 

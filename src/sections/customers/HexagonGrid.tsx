@@ -1,19 +1,32 @@
-import { Hexagon } from "../../layout/Hexagon"
+import { Hexagon, ObjectFit } from "../../layout/Hexagon"
 
-interface HexagonProps {
+export interface HexagonProps {
   image: string
   alt: string
+  objectFit: ObjectFit
 }
 
 interface Props {
   hexagons: HexagonProps[]
+  size: number
 }
 
-export const HexagonGrid = ({ hexagons }: Props) => {
+export const HexagonGrid = ({ hexagons, size }: Props) => {
+  const containerStyle: React.CSSProperties = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  }
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div style={containerStyle}>
       {hexagons.map(hexagon => (
-        <Hexagon key={hexagon.image} imageUrl={hexagon.image} size={200} />
+        <Hexagon
+          key={hexagon.image}
+          imageUrl={hexagon.image}
+          size={size}
+          objectFit={hexagon.objectFit}
+        />
       ))}
     </div>
   )
