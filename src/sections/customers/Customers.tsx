@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { imgElinorr, imgGodesity, imgHairtastic, imgLeeroy, imgSmidesrum } from "../../imgs"
+import { imgElinorr, imgGodesity, imgHairtastic, imgLantmateriet, imgLeeroy, imgSmidesrum } from "../../imgs"
 import { Hexagon } from "../../layout/Hexagon"
 import { Section } from "../../layout/Section"
 import "./customers.scss"
@@ -9,6 +9,7 @@ import { HexagonGrid, HexagonProps } from "./HexagonGrid"
 
 const Customers = () => {
   const customers: HexagonProps[] = [
+    { image: imgLantmateriet, alt: "Lantmäteriet", objectFit: "contain" },
     { image: imgElinorr, alt: "Elinorr", objectFit: "cover" },
     { image: imgGodesity, alt: "Godesity", objectFit: "cover" },
     { image: imgHairtastic, alt: "Hairtastic", objectFit: "cover" },

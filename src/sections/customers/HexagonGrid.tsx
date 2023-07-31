@@ -12,22 +12,16 @@ interface Props {
 }
 
 export const HexagonGrid = ({ hexagons, size }: Props) => {
-  const containerStyle: React.CSSProperties = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-  }
-
   return (
-    <div style={containerStyle}>
-      {hexagons.map(hexagon => (
-        <Hexagon
+    <div className="hexagon-grid">
+      {hexagons.map((hexagon, index) => {
+        return <Hexagon
           key={hexagon.image}
           imageUrl={hexagon.image}
           size={size}
           objectFit={hexagon.objectFit}
         />
-      ))}
+      })}
     </div>
   )
 }
