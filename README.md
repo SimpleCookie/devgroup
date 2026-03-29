@@ -3,19 +3,31 @@
 This website is intended to be the homepage for [Dvgroup AB](https://devgroup.se/)
 The development website can be found at [https://devgroup.pages.dev/](https://devgroup.pages.dev/)
 
-## Available Scripts
+## Tooling
+
+This project uses:
+
+- Vite for local development and production builds
+- Vitest for tests
+
+## Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run dev` or `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode.
+Open http://localhost:5173 to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run build`
 
-### `yarn test`
+Builds the app for production into the `dist` folder.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run preview`
+
+Serves the production build locally for verification.
+
+### `npm test`
+
+Runs the Vitest test runner.
+
