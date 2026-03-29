@@ -1,5 +1,4 @@
 import { LogoCard, ObjectFit } from "../../../layout/LogoCard"
-import "./LogoGrid.scss"
 
 export interface LogoCardProps {
   image: string
@@ -13,7 +12,7 @@ interface Props {
 }
 
 export const LogoGrid = ({ logos }: Props) => (
-  <div className="logo-grid">
+  <div className="grid grid-cols-[repeat(3,180px)] gap-4 justify-center max-sm:grid-cols-[repeat(2,160px)] max-sm:gap-3">
     {logos.map((logo) => (
       <LogoCard
         key={logo.image}

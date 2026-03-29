@@ -1,6 +1,3 @@
-import type { CSSProperties } from "react"
-import "./SectionIntro.scss"
-
 interface SectionIntroProps {
   eyebrow: string
   title: string
@@ -29,30 +26,35 @@ export const SectionIntro = ({
   titleLineHeight,
   subtitleMaxWidth,
   subtitleMarginTop = "0",
-}: SectionIntroProps) => {
-  const vars = {
-    "--intro-align": align,
-    "--intro-margin-bottom": marginBottom,
-    "--intro-eyebrow-margin-bottom": eyebrowMarginBottom,
-    "--intro-title-size": titleSize,
-    "--intro-title-color": tone === "dark" ? "#fff" : "#0a0a0f",
-    "--intro-title-margin-bottom": titleMarginBottom,
-    "--intro-title-line-height": titleLineHeight || "normal",
-    "--intro-subtitle-color": tone === "dark" ? "rgba(255, 255, 255, 0.38)" : "#777",
-    "--intro-subtitle-margin-top": subtitleMarginTop,
-    "--intro-subtitle-max-width": subtitleMaxWidth || "none",
-    "--intro-subtitle-side-margin": align === "center" ? "auto" : "0",
-  } as CSSProperties
-
-  return (
-    <div className="section-intro" style={vars}>
-      <div className="section-intro__eyebrow">{eyebrow}</div>
-      <h2 className="section-intro__title">{title}</h2>
-      {subtitle && (
-        <p className="section-intro__subtitle">
-          {subtitle}
-        </p>
-      )}
+}: SectionIntroProps) => (
+  <div
+    className={align === "left" ? "text-left" : "text-center"}
+    style={{ marginBottom }}
+  >
+    <div
+      className="text-[#ff6b35] text-xs font-bold uppercase tracking-[0.1em]"
+      style={{ marginBottom: eyebrowMarginBottom }}
+    >
+      {eyebrow}
     </div>
-  )
-}
+    <h2
+      className={`font-extrabold tracking-[-0.025em] ${tone === "dark" ? "text-white" : "text-[#0a0a0f]"}`}
+      style={{ fontSize: titleSize, marginBottom: titleMarginBottom, lineHeight: titleLineHeight || "normal" }}
+    >
+      {title}
+    </h2>
+    {subtitle && (
+      <p
+        className={`text-[17px] leading-[1.65] ${tone === "dark" ? "text-white/[0.38]" : "text-[#777]"}`}
+        style={{
+          marginTop: subtitleMarginTop,
+          marginLeft: align === "center" ? "auto" : 0,
+          marginRight: align === "center" ? "auto" : 0,
+          maxWidth: subtitleMaxWidth || "none",
+        }}
+      >
+        {subtitle}
+      </p>
+    )}
+  </div>
+)

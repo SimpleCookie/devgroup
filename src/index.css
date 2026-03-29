@@ -1,3 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-header-float: header-float 9s ease-in-out infinite;
+  --animate-header-fade-up: header-fade-up 0.9s ease-out both;
+  --animate-cta-pulse: cta-pulse 5s ease-in-out infinite;
+}
+
+@keyframes header-float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-24px) rotate(4deg);
+  }
+
+  66% {
+    transform: translateY(-12px) rotate(-3deg);
+  }
+}
+
+@keyframes header-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cta-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
+
 html,
 body {
   margin: 0;
