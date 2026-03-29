@@ -39,7 +39,7 @@ const Item = styled.div`
 `
 
 const Number = styled.div`
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   font-weight: 900;
   background: linear-gradient(135deg, #ff6b35, #ffb347);
   -webkit-background-clip: text;
@@ -66,16 +66,16 @@ export const Stats = () => (
         <Label>Years Experience</Label>
       </Item>
       <Item>
-        <Number>50+</Number>
-        <Label>Projects Delivered</Label>
+        <Number>Full&#8209;Stack</Number>
+        <Label>Frontend &amp; Backend</Label>
       </Item>
       <Item>
         <Number>6+</Number>
         <Label>Clients Served</Label>
       </Item>
       <Item>
-        <Number>100%</Number>
-        <Label>Commitment</Label>
+        <Number>CI/CD</Number>
+        <Label>Automated Delivery</Label>
       </Item>
     </Grid>
   </Wrapper>

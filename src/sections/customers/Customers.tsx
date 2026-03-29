@@ -7,7 +7,7 @@ import {
   imgLeeroy,
   imgSmidesrum,
 } from "../../imgs"
-import { HexagonGrid, HexagonProps } from "./HexagonGrid"
+import { LogoGrid, LogoCardProps } from "./LogoGrid"
 
 const Wrapper = styled.section`
   background: #0d1117;
@@ -43,13 +43,13 @@ const Sub = styled.p`
 `
 
 const Customers = () => {
-  const customers: HexagonProps[] = [
-    { image: imgLantmateriet, alt: "Lantmäteriet", objectFit: "contain" },
-    { image: imgElinorr, alt: "Elinorr", objectFit: "cover" },
-    { image: imgGodesity, alt: "Godesity", objectFit: "cover" },
-    { image: imgHairtastic, alt: "Hairtastic", objectFit: "cover" },
-    { image: imgLeeroy, alt: "Leeroy", objectFit: "contain", padding: true },
-    { image: imgSmidesrum, alt: "Smidesrum", objectFit: "contain", padding: true },
+  const customers: LogoCardProps[] = [
+    { image: imgLantmateriet, name: "Lantmäteriet", objectFit: "contain" },
+    { image: imgElinorr, name: "Elinorr", objectFit: "cover" },
+    { image: imgGodesity, name: "Godesity", objectFit: "cover" },
+    { image: imgHairtastic, name: "Hairtastic", objectFit: "cover" },
+    { image: imgLeeroy, name: "Leeroy", objectFit: "contain", padding: true },
+    { image: imgSmidesrum, name: "Smidesrum", objectFit: "contain", padding: true },
   ]
   return (
     <Wrapper id="customers">
@@ -58,7 +58,7 @@ const Customers = () => {
         <Title>Our customers</Title>
         <Sub>Companies that chose to build with Devgroup</Sub>
       </SectionHeader>
-      <HexagonGrid hexagons={customers} size={180} />
+      <LogoGrid logos={customers} />
     </Wrapper>
   )
 }

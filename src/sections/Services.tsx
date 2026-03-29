@@ -96,12 +96,12 @@ const services = [
   {
     icon: "💻",
     title: "Web Development",
-    text: "Modern, performant web applications built with the latest technologies — from single-page apps to full-stack solutions.",
+    text: "Modern React applications, reusable component libraries and design systems — from single-page apps to full-stack solutions built for scale and maintainability.",
   },
   {
-    icon: "📱",
-    title: "Mobile Applications",
-    text: "Cross-platform mobile apps delivering native experiences on both iOS and Android.",
+    icon: "⚙️",
+    title: "Backend & APIs",
+    text: "Robust server-side systems with Kotlin/Spring Boot and Node.js (Fastify, Express). REST, SOAP and GraphQL APIs, containerised with Docker and run on Kubernetes and OpenShift.",
   },
   {
     icon: "🧭",

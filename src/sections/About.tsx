@@ -137,23 +137,23 @@ const About = () => (
         <EyebrowLabel>Who we are</EyebrowLabel>
         <Title>A development group built on passion &amp; expertise</Title>
         <Body>
-          The name Devgroup originates from{" "}
-          <strong>Development</strong> and <strong>Group</strong> — a tight-knit
-          team dedicated to delivering IT solutions that genuinely work for your
-          business.
+          Founded by <strong>Marcus Ekström</strong> — a Civil Engineer in Computer
+          Science from Mid Sweden University and a{" "}
+          <strong>Partner at Kvadrat</strong>, Sweden’s leading network of IT
+          consultants. Marcus has also taught programming at university level.
         </Body>
         <Body>
-          We’re serious about quality, but delightful to work with. From the
-          first meeting to the final launch, you’re a true partner in every
-          decision.
+          Every project ships with <strong>automated tests</strong>,{" "}
+          <strong>CI/CD pipelines</strong>, and production-grade code using the
+          same battle-tested stack powering Sweden’s national infrastructure.
         </Body>
         <FeatureGrid>
-          <Feature>Agile methodology</Feature>
-          <Feature>Close collaboration</Feature>
-          <Feature>Modern tech stack</Feature>
-          <Feature>Transparent process</Feature>
-          <Feature>Long-term support</Feature>
-          <Feature>Iterative delivery</Feature>
+          <Feature>TypeScript &amp; React</Feature>
+          <Feature>React Design Systems</Feature>
+          <Feature>Kotlin &amp; Spring Boot</Feature>
+          <Feature>Docker &amp; Kubernetes</Feature>
+          <Feature>CI/CD pipelines</Feature>
+          <Feature>Automated testing</Feature>
         </FeatureGrid>
       </TextSide>
       <CardSide>
@@ -168,22 +168,23 @@ const About = () => (
           </CardContent>
         </InfoCard>
         <InfoCard>
-          <CardIcon>🔬</CardIcon>
+          <CardIcon>🧪</CardIcon>
           <CardContent>
-            <h4>Modern agile delivery</h4>
+            <h4>Quality-first engineering</h4>
             <p>
-              We follow current industry best practices for fast, reliable, and
-              maintainable releases.
+              Unit, integration and end-to-end tests, paired with automated
+              CI/CD pipelines so every release is reliable.
             </p>
           </CardContent>
         </InfoCard>
         <InfoCard>
           <CardIcon>🚀</CardIcon>
           <CardContent>
-            <h4>End-to-end ownership</h4>
+            <h4>Cloud &amp; DevOps</h4>
             <p>
-              Architecture, design, testing, deployment — we own and care about
-              the full lifecycle.
+              Docker, Kubernetes and OpenShift paired with CI/CD pipelines —
+              containerised workloads deployed automatically on enterprise
+              infrastructure.
             </p>
           </CardContent>
         </InfoCard>

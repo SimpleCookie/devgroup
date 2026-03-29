@@ -41,6 +41,28 @@ const Credit = styled.div`
   margin-top: 5px;
 `
 
+const Links = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+  justify-content: flex-end;
+
+  @media (max-width: 640px) {
+    justify-content: flex-start;
+  }
+`
+
+const FooterLink = styled.a`
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #ff6b35;
+  }
+`
+
 export const Footer = () => {
   const year = dayjs().year()
   return (
@@ -52,6 +74,11 @@ export const Footer = () => {
         <Right>
           <CopyText>© {year} Devgroup AB. All rights reserved.</CopyText>
           <Credit>Logotype by Maria Skogen &middot; Website by Marcus Ekström</Credit>
+          <Links>
+            <FooterLink href="https://github.com/SimpleCookie" target="_blank" rel="noopener noreferrer">GitHub</FooterLink>
+            <FooterLink href="https://kvadrat.se" target="_blank" rel="noopener noreferrer">Kvadrat</FooterLink>
+            <FooterLink href="mailto:info@devgroup.se">Contact</FooterLink>
+          </Links>
         </Right>
       </Inner>
     </Wrapper>
