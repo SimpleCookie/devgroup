@@ -1,20 +1,15 @@
-import styled from "styled-components"
-import { theme } from "../globals/theme"
-import { About, Customers } from "../sections"
+import { Stats } from "../sections/Stats"
+import { Services } from "../sections/Services"
+import { About } from "../sections"
+import { Customers } from "../sections"
+import { CTA } from "../sections/CTA"
 
-const Wrapper = styled.div`
-  background-color: ${theme.default.secondary};
-  color: ${theme.default.textOnSecondary};
-  min-height: 40vh;
-`
-
-export const Home = () => {
-  return (
-    <Wrapper>
-      <main className="md:container md:mx-auto">
-        <About />
-        <Customers />
-      </main>
-    </Wrapper>
-  )
-}
+export const Home = () => (
+  <main>
+    <Stats />
+    <Services />
+    <About />
+    <Customers />
+    <CTA />
+  </main>
+)

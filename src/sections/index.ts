@@ -1,2 +1,5 @@
 export { default as About } from "./About"
 export { default as Customers } from "./customers/Customers"
+export { Services } from "./Services"
+export { Stats } from "./Stats"
+export { CTA } from "./CTA"

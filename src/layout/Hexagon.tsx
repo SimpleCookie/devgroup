@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import "./hexagon.scss"
-import React from "react"
 
 export type ObjectFit = "cover" | "contain"
+
 interface Props {
   imageUrl: string
   size?: number
@@ -10,38 +9,50 @@ interface Props {
   padding?: boolean
 }
 
-const HexagonContainer = styled.div<{ size: number }>`
+const HexOuter = styled.div<{ size: number }>`
   position: relative;
-  width: ${(props) => props.size}px;
-  height: ${(props) => props.size * 0.866}px;
-  background-color: chocolate;
+  width: ${(p) => p.size}px;
+  height: ${(p) => p.size * 0.866}px;
+  background: linear-gradient(135deg, #ff6b35, #ff9a4d);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  margin: 5px;
+  margin: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1) translateY(-8px);
+    filter: drop-shadow(0 16px 32px rgba(255, 107, 53, 0.45));
+  }
 `
 
-const HexagonImage = styled.img<{ objectFit: ObjectFit }>`
+const HexInner = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #fff;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`
+
+const HexImg = styled.img<{ $objectFit: ObjectFit }>`
   width: 100%;
   height: 100%;
-  object-fit: ${(props) => props.objectFit};
-`
-const Stroke = styled.div<{ size: number }>`
-  position: absolute;
-  background: #555;
-  top: ${(props) => props.size / 2}px;
-  left: ${(props) => props.size / 2}px;
-  width: calc(100% - ${(props) => props.size}px);
-  height: calc(100% - ${(props) => props.size}px);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+  object-fit: ${(p) => p.$objectFit};
 `
 
-export const Hexagon = ({ imageUrl, size, objectFit, padding }: Props) => {
-
-  return <HexagonContainer size={size ?? 200}>
-    <Stroke size={4}>
-      <HexagonImage src={imageUrl} objectFit={objectFit} style={padding ? { padding: "5px" } : undefined} />
-    </Stroke>
-  </HexagonContainer>
-}
+export const Hexagon = ({ imageUrl, size = 200, objectFit, padding }: Props) => (
+  <HexOuter size={size}>
+    <HexInner>
+      <HexImg
+        src={imageUrl}
+        $objectFit={objectFit}
+        style={padding ? { padding: "14px" } : undefined}
+      />
+    </HexInner>
+  </HexOuter>
+)
