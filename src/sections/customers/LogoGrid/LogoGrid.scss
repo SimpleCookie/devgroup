@@ -1,0 +1,11 @@
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 16px;
+  justify-content: center;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 160px);
+    gap: 12px;
+  }
+}

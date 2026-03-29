@@ -1,6 +1,6 @@
-export { default as About } from "./About"
+export { default as About } from "./about/About"
 export { default as Customers } from "./customers/Customers"
-export { Services } from "./Services"
+export { Services } from "./services/Services"
 export { Stats } from "./Stats"
 export { CTA } from "./CTA"
 export { TechStack } from "./TechStack"
