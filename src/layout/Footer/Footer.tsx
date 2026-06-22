@@ -1,8 +1,11 @@
 import dayjs from "dayjs"
 import { logoOrangeWhite } from "../../imgs"
+import { useLanguage } from "../../i18n/LanguageContext"
 
 export const Footer = () => {
   const year = dayjs().year()
+  const { t } = useLanguage()
+  const f = t.footer
   const linkClass = "text-white/30 text-xs no-underline transition-colors duration-200 hover:text-[#ff6b35]"
   return (
     <footer className="bg-[#060609] border-t border-white/[0.06] py-[52px] px-10 max-sm:py-10 max-sm:px-5">
@@ -11,12 +14,12 @@ export const Footer = () => {
           <img src={logoOrangeWhite} alt="Devgroup" className="h-[30px] w-auto" />
         </div>
         <div className="text-right max-sm:text-left">
-          <div className="text-white/30 text-[13px]">© {year} Devgroup AB. All rights reserved.</div>
-          <div className="text-white/[0.18] text-xs mt-[5px]">Logotype by Maria Skogen &middot; Website by Marcus Ekström</div>
+          <div className="text-white/30 text-[13px]">© {year} Devgroup AB. {f.rights}</div>
+          <div className="text-white/[0.18] text-xs mt-[5px]">{f.credits}</div>
           <div className="flex gap-5 mt-3 justify-end max-sm:justify-start">
-            <a className={linkClass} href="https://github.com/SimpleCookie" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a className={linkClass} href="https://kvadrat.se" target="_blank" rel="noopener noreferrer">Kvadrat</a>
-            <a className={linkClass} href="mailto:info@devgroup.se">Contact</a>
+            <a className={linkClass} href="https://github.com/SimpleCookie" target="_blank" rel="noopener noreferrer">{f.github}</a>
+            <a className={linkClass} href="https://kvadrat.se" target="_blank" rel="noopener noreferrer">{f.kvadrat}</a>
+            <a className={linkClass} href="mailto:info@devgroup.se">{f.contact}</a>
           </div>
         </div>
       </div>

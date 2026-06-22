@@ -1,12 +1,16 @@
 import { SectionIntro } from "../../shared/SectionIntro"
+import { useLanguage } from "../../../i18n/LanguageContext"
 
-export const CustomersHeader = () => (
-  <SectionIntro
-    eyebrow="Trusted by"
-    title="Our customers"
-    subtitle="Companies that chose to build with Devgroup"
-    tone="dark"
-    subtitleMarginTop="14px"
-    titleMarginBottom="0"
-  />
-)
+export const CustomersHeader = () => {
+  const { t } = useLanguage()
+  return (
+    <SectionIntro
+      eyebrow={t.customers.eyebrow}
+      title={t.customers.title}
+      subtitle={t.customers.subtitle}
+      tone="dark"
+      subtitleMarginTop="14px"
+      titleMarginBottom="0"
+    />
+  )
+}

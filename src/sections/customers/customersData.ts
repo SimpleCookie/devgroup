@@ -9,7 +9,7 @@ import {
 import { LogoCardProps } from "./LogoGrid"
 
 export const customersData: LogoCardProps[] = [
-  { image: imgLantmateriet, name: "Lantmateriet", objectFit: "contain" },
+  { image: imgLantmateriet, name: "Lantmateriet", objectFit: "contain", href: "https://www.kvadrat.se/om-kvadrat/aktuellt/vi-bytte-sveriges-pantbrevssystem/" },
   { image: imgElinorr, name: "Elinorr", objectFit: "cover" },
   { image: imgGodesity, name: "Godesity", objectFit: "cover" },
   { image: imgHairtastic, name: "Hairtastic", objectFit: "cover" },

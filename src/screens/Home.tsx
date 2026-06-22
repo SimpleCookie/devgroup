@@ -1,8 +1,10 @@
-import { Stats, Services, TechStack, About, Customers, CTA } from "../sections"
+import { Stats, Services, TechStack, About, Customers, CTA, CaseStudy, Projects } from "../sections"
 
 export const Home = () => (
   <main>
     <Stats />
+    <CaseStudy />
+    <Projects />
     <TechStack />
     <Services />
     <About />

@@ -1,10 +1,14 @@
 import { SectionIntro } from "../../shared/SectionIntro"
+import { useLanguage } from "../../../i18n/LanguageContext"
 
-export const ServicesHeader = () => (
-  <SectionIntro
-    eyebrow="What we do"
-    title="End-to-end IT expertise"
-    subtitle="From first line of code to final deployment - and everything in between."
-    subtitleMaxWidth="480px"
-  />
-)
+export const ServicesHeader = () => {
+  const { t } = useLanguage()
+  return (
+    <SectionIntro
+      eyebrow={t.services.eyebrow}
+      title={t.services.title}
+      subtitle={t.services.subtitle}
+      subtitleMaxWidth="480px"
+    />
+  )
+}
