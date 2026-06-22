@@ -20,13 +20,12 @@ jobs:
 
       - run: npm run build
 
-      - name: Deploy to one.com via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          local_path: ./dist/*
-          remote_path: c60tlipgc/webroots/www/live
-          sftp_only: true
+      - name: Deploy to one.com
+        run: |
+          sudo apt-get install -y lftp
+          lftp -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" \
+            -e "set sftp:auto-confirm yes; \
+                mirror --reverse --delete --verbose \
+                ./dist/ c60tlipgc/webroots/www/live/; \
+                quit" \
+            sftp://${{ secrets.FTP_HOST }}:22
